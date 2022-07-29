@@ -1,11 +1,23 @@
 #include "Logger.h"
 
-ostream& LoggerClass::ConsoleLogger::GetStream()
+LoggerClass::Logger* LoggerClass::LoggerFactory::CreateFileLogger(string FilePath)
 {
+    return nullptr;
+
 
 }
 
-ostream& LoggerClass:: FileLogger::GetStream()
+LoggerClass::Logger* LoggerClass::LoggerFactory::CreateConsoleLogger()
 {
+    return nullptr;
+}
 
+ostream& LoggerClass::ConsoleLogger::GetStream()
+{
+    return GetStream();
+}
+
+ostream& LoggerClass::FileLogger::GetStream()
+{
+    return GetStream();
 }

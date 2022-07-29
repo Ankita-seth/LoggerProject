@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include <fstream>
+#define LOG() g_logger->GetStream()
 
 using namespace std;
 namespace LoggerClass
@@ -26,6 +27,8 @@ namespace LoggerClass
 
 	class LoggerFactory
 	{
+	    
+
 		static Logger* CreateFileLogger(std::string FilePath);
 		static Logger* CreateConsoleLogger();
 
