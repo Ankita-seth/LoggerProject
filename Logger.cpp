@@ -2,22 +2,24 @@
 
 LoggerClass::Logger* LoggerClass::LoggerFactory::CreateFileLogger(string FilePath)
 {
-    return nullptr;
-
-
+    
+    return new FileLogger(FilePath);
 }
 
 LoggerClass::Logger* LoggerClass::LoggerFactory::CreateConsoleLogger()
 {
-    return nullptr;
+    return new ConsoleLogger();
 }
 
 ostream& LoggerClass::ConsoleLogger::GetStream()
 {
-    return GetStream();
+
+    return std::cout;
 }
 
 ostream& LoggerClass::FileLogger::GetStream()
 {
-    return GetStream();
+    return m_filelogger;
 }
+
+
