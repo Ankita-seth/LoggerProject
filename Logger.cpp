@@ -1,8 +1,7 @@
 #include "Logger.h"
 
 LoggerClass::Logger* LoggerClass::LoggerFactory::CreateFileLogger(string FilePath)
-{
-    
+{  
     return new FileLogger(FilePath);
 }
 
@@ -13,8 +12,7 @@ LoggerClass::Logger* LoggerClass::LoggerFactory::CreateConsoleLogger()
 
 ostream& LoggerClass::ConsoleLogger::GetStream()
 {
-
-    return std::cout;
+   return std::cout;
 }
 
 ostream& LoggerClass::FileLogger::GetStream()
